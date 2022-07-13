@@ -1,0 +1,129 @@
+#ml2 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+
+#ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.ml2 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+/*Button Animated */
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all .2s;
+  position: absolute;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: #f7f7f7;
+  color: #7209B7;
+  font-family: Verdana, Arial, Tahoma, Serif;
+  font-size: larger;
+  font-weight: 600;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 5s ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0px);
+  }
+}
+/*portofolio*/
+.hov:hover{
+  transform: scale(1.1);
+  transition: all 0.3s;
+}
+/*Dots on right side*/
+.dot{
+  height: 10px;
+  width: 10px;
+  border-radius: 10px;
+  background-color: rgb(136, 136, 136);
+}
+.dots{
+  position: fixed;
+  height: 100px;
+  top: 50vh;
+  right:10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  z-index: 5;
+}
+.dot-selected{
+  background-color: rgb(203, 203, 203);
+}
+
+/* Snap Scroll */
+
+html { 
+  scroll-snap-type: proximity;
+  scroll-snap-type: y proximity;
+}
+
+section {
+  scroll-snap-align: start;
+}
+/*Nav*/
+.nav{
+  background-color: rgba(128, 128, 128, 0.7);
+  z-index:100;
+}
